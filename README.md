@@ -5,3 +5,5 @@ https://github.com/leocamachocr/ucr-if-3000/blob/main/poo/source/pom.xml
 
 
 https://codeshare.io/789Bk1
+
+mediacionJ1@
