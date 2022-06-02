@@ -21,10 +21,12 @@ import java.io.IOException;
 /**
  * @author PC
  */
-public class XmlPersistence<E extends PersistenceEntity>
-        extends FilePersistence<E> {
+public class XmlPersistence<E
+        extends PersistenceEntity>
+        extends FilePersistence<E>
+{
 
-    public XmlPersistence(String root, Class<E> clazz) {
+    public XmlPersistence(String root, Class clazz) {
         super(root, "xml", clazz);
     }
 

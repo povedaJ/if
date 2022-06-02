@@ -1,0 +1,12 @@
+ac\ucr\b96086\persistence\PersistenceEntity.class
+ac\ucr\b96086\App.class
+ac\ucr\b96086\domain\Phone.class
+ac\ucr\b96086\persistence\strategy\JsonPersistence.class
+ac\ucr\b96086\persistence\Persistence.class
+ac\ucr\b96086\persistence\PersistenceContext$1.class
+ac\ucr\b96086\domain\Address.class
+ac\ucr\b96086\persistence\FilePersistence.class
+ac\ucr\b96086\service\ContactService.class
+ac\ucr\b96086\persistence\PersistenceContext.class
+ac\ucr\b96086\persistence\PersistenceStrategy.class
+ac\ucr\b96086\domain\Contact.class

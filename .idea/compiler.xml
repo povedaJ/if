@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="poo" />
+        <module name="ac.ucr.b96086" />
+        <module name="Lab01" />
+        <module name="lab07" />
+        <module name="Lab02" />
+        <module name="ExampleFacade" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ac.ucr.b96086" target="1.8" />
+      <module name="ExampleFacade" target="11" />
+      <module name="Lab01" target="1.8" />
+      <module name="Lab02" target="1.8" />
+      <module name="lab07" target="18" />
+      <module name="poo" target="9" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

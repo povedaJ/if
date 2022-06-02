@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/PatronFacade/ExampleFacade/ExampleFacade.iml" filepath="$PROJECT_DIR$/PatronFacade/ExampleFacade/ExampleFacade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab01/Lab01.iml" filepath="$PROJECT_DIR$/Lab01/Lab01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab02/Lab02.iml" filepath="$PROJECT_DIR$/Lab02/Lab02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab4XML/lab4/ac.ucr.b96086.iml" filepath="$PROJECT_DIR$/lab4XML/lab4/ac.ucr.b96086.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/if.iml" filepath="$PROJECT_DIR$/.idea/if.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab06/lab06/lab07.iml" filepath="$PROJECT_DIR$/lab06/lab06/lab07.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab4/poo.iml" filepath="$PROJECT_DIR$/lab4/poo.iml" />
+    </modules>
+  </component>
+</project>

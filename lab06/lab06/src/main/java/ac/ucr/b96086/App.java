@@ -5,6 +5,8 @@ import ac.ucr.b96086.persistence.PersistenceContext;
 import ac.ucr.b96086.persistence.PersistenceStrategy;
 import ac.ucr.b96086.service.ContactService;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -14,8 +16,12 @@ import java.util.List;
  */
 public class App {
 
-    public static void main(String[] args) {
-        PersistenceContext.getInstance().setRoot("C:\\Users\\oandr\\OneDrive\\Escritorio\\Semestre I 2022\\Programación II\\Nueva carpeta");
+    public static void main(String[] args)  {
+        try {
+            PersistenceContext.getInstance().setRoot(new File("data").getCanonicalPath());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         PersistenceContext.getInstance().setStrategy(PersistenceStrategy.XML);
 
         ContactService service = new ContactService();

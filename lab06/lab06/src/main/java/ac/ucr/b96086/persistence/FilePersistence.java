@@ -15,7 +15,9 @@ import java.util.stream.Collectors;
 /**
  * @author viviana
  */
-public abstract class FilePersistence<E extends PersistenceEntity> implements Persistence<E> {
+public abstract class FilePersistence<E
+        extends PersistenceEntity>
+        implements Persistence<E> {
 
     private String root;
     //String-Classs -> nombre de la entidad
@@ -33,18 +35,19 @@ public abstract class FilePersistence<E extends PersistenceEntity> implements Pe
      *
      * @return
      */
+
+
     public void storeFile(E value) throws IOException {
         File file = new File(root, clazz.getCanonicalName() + "-" + value.getId() + "." + extension);
         String valueConverted = convert(value);
         // Java 8
-//        BufferedWriter writer2=null;
-//        try {
-//            writer2= new BufferedWriter(new FileWriter(file));
-//        }finally {
-//
-//            writer2.close();
-//        }
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file)); writer) {
+       BufferedWriter writer2=null;
+        try {
+            writer2 = new BufferedWriter(new FileWriter(file));
+       }finally {
+           writer2.close();
+        }
+       try (BufferedWriter writer = new BufferedWriter(new FileWriter(file)); writer) {
             writer.write(valueConverted);
         }
     }
@@ -60,7 +63,7 @@ public abstract class FilePersistence<E extends PersistenceEntity> implements Pe
         }
     }
 
-    public List<E> findAll() {
+    public List findAll() {
         //Va a buscar todos los tipos de un archivo
         File rootFolder = new File(root);
 
@@ -70,7 +73,7 @@ public abstract class FilePersistence<E extends PersistenceEntity> implements Pe
                 .map(file -> convertToEntity(file))
                 .collect(Collectors.toList());//Una manera de recorrer arreglos o colecciones
         return entities;
-    }
+    }//findAll
 
     private E convertToEntity(File file) {
 //Leer archivo y convertirlo usando la clase especializada

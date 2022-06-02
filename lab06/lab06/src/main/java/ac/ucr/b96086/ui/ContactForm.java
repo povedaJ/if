@@ -6,10 +6,6 @@
 package ac.ucr.b96086.ui;
 
 
-import static java.awt.SystemColor.text;
-
-import java.util.stream.IntStream;
-
 import ac.ucr.b96086.domain.Contact;
 import ac.ucr.b96086.persistence.PersistenceContext;
 import ac.ucr.b96086.persistence.PersistenceStrategy;
@@ -24,9 +20,10 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-/**
- * @author
- */
+import java.io.File;
+import java.io.IOException;
+import java.util.stream.IntStream;
+
 public class ContactForm extends Application {
     private TextField name = new TextField();
     private TextField lastName = new TextField();
@@ -103,9 +100,21 @@ public class ContactForm extends Application {
     }
 
     public static void main(String[] args) {
-        PersistenceContext.getInstance().setRoot("C:\\Users\\oandr\\OneDrive\\Escritorio\\Semestre I 2022\\Programación II\\Nueva carpeta");
+        try {
+            PersistenceContext.getInstance().setRoot(new File("data").getCanonicalPath());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         PersistenceContext.getInstance().setStrategy(PersistenceStrategy.XML);
         launch(args);
     }
-
+    public static void maint(String[] args) {
+        try {
+            PersistenceContext.getInstance().setRoot(new File("data").getCanonicalPath());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        PersistenceContext.getInstance().setStrategy(PersistenceStrategy.JSON);
+        launch();
+    }
 }
