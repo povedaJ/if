@@ -104,6 +104,11 @@ class TransactionServiceImpl implements TransactionService {
         // su código va aquí
     }
 }
+        
+        G/
+        
+        J/
+        
   ---------------------------------------------------------------------------------------------------------------------------
   (30 pts) Utilizando Sockets realice dos aplicaciones una cliente y una servidora que indique si dos palabras son un palíndromo, considere lo siguiente:
 
