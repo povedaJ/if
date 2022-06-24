@@ -1,0 +1,47 @@
+
+public class Account {
+    private String name;
+    private Long balance;
+
+    public Long getBalance() {
+        return balance;
+    }
+
+    public void setBalance(Long balance) {
+        this.balance = balance;
+    }
+    /*Asuma que existen los getters y setters de cada variable*/
+}
+interface TransactionService {
+    Account debitTransaction(Account account, Long debit);
+
+    Account creditTransaction(Account account, Long credit);
+    /*Los métodos default van aquí*/
+    default long addition(long  var1, long  var2) {
+       return var1+var2;
+    }
+
+    default long sustract(long  var1, long  var2) {
+        if(var1<var2){
+            new RuntimeException("No se puede realizar la resta ");
+        }
+        return var1-var2;
+    }
+
+}
+
+class TransactionServiceImpl implements TransactionService{
+    
+    public Account debitTransaction(Account account, Long debit) {
+      long transaction =  sustract(account.getBalance(),debit);
+        account.setBalance(transaction);
+        return account;
+    }
+
+    public Account creditTransaction(Account account, Long credit) {
+        // su código va aquí
+        long transaction = addition(account.getBalance(),credit);
+        account.setBalance(transaction);
+        return account;
+    }
+}
